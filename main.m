@@ -1,4 +1,4 @@
-%% SBAI 2021
+%Vers√£o do trabalho final
 close all
 clear all
 clc
@@ -21,7 +21,7 @@ d=s+fnoise; % desired signal
 x = s+v;
 
 % ----------------------------- L M S -------------------------------------
-wl = 0.27*ones(1,M); % tive q normalizar (para ruÌdo alto colocar 0.3)
+wl = 0.27*ones(1,M); % tive q normalizar (para ru√≠do alto colocar 0.3)
 % Blackmann Window
 for i = 1:M-1
 wl(i+1)=(0.42 + 0.5*(2*pi/(M-1)) + 0.08*(4*pi/(M-1)));
@@ -96,7 +96,7 @@ end
 
 % ----------------------------- R L S -------------------------------------
 % Sinal
-% phi È o mesmo sem intervalo
+% phi √© o mesmo sem intervalo
 % s continua sendo o mesmo
 % logo todo sinal gerado sem intervalo entra aqui no RLS
 %wr_int = 0.37*intval(ones(M,1)); 
@@ -140,28 +140,28 @@ hold on
 plot(x_int(100:250))
 grid on
 
-% figure (2) % ComparaÁ„o entre desejado intervalar e normal
+% figure (2) % Compara√ß√£o entre desejado intervalar e normal
 % plot(yl(100:500),'LineWidth',2)
 % hold on
 % plot(s_int(100:500),'LineWidth',2)
-% legend('Sinal Desejado','Sinal Filtrado','Sinal+RuÌdo')
+% legend('Sinal Desejado','Sinal Filtrado','Sinal+Ru√≠do')
 % title('LMS')
 
-% figure (3) % ComparaÁ„o entre desejado intervalar e normal
+% figure (3) % Compara√ß√£o entre desejado intervalar e normal
 % plot(yr(100:500),'LineWidth',2)
 % hold on
 % plot(s_int(100:500),'LineWidth',2)
-% legend('Sinal Desejado','Sinal Filtrado','Sinal+RuÌdo')
+% legend('Sinal Desejado','Sinal Filtrado','Sinal+Ru√≠do')
 % title('RLS Sem Intervalo')
 
-figure (4) % ComparaÁ„o entre desejado intervalar e normal
+figure (4) % Compara√ß√£o entre desejado intervalar e normal
 plot(d_int(100:250),'b')
 hold on
 plot(yl_int(100:250),'k')
 title('LMS Intervalar')
 grid on
 
-figure (5) % ComparaÁ„o entre desejado intervalar e normal
+figure (5) % Compara√ß√£o entre desejado intervalar e normal
 plot(d_int(100:250),'b')
 hold on
 plot(y1_int(100:250),'k')
@@ -191,4 +191,4 @@ grid on
 % plot(nn,10*log10(JLMS))
 % hold on
 % plot(nn,10*log10(JRLS)),legend('LMS','RLS'),title('Learning curve')
-% ylabel('MSE (Escala LogarÌtmica)'), xlabel('Iteration Number')
+% ylabel('MSE (Escala Logar√≠tmica)'), xlabel('Iteration Number')
